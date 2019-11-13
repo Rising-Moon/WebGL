@@ -1,6 +1,7 @@
 ﻿var VSHADER_SOUCE =
+    'attribute vec4 a_Position;\n' +
     'void main() {\n' +
-    '   gl_Position = vec4(0.0,0.0,0.0,1.0);\n' +
+    '   gl_Position = a_Position;\n' +
     '   gl_PointSize = 2.0;' +
     '}\n';
 
@@ -24,6 +25,14 @@ function main() {
         console.log("初始化着色器失败");
         return;
     }
+
+    var a_Position = gl.getAttribLocation(gl.program, 'a_Position');
+    if (a_Position < 0) {
+        console.log("webgl上下文丢失");
+        return;
+    }
+
+    gl.vertexAttrib3f(a_Position, 0.0, 0.5, 0.0);
 
     gl.clearColor(0, 0, 0, 1);
     gl.clear(gl.COLOR_BUFFER_BIT);
