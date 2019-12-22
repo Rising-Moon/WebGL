@@ -45,7 +45,7 @@ function main() {
 
     gl.clear(gl.COLOR_BUFFER_BIT);
 
-    gl.drawArrays(gl.TRIANGLES, 0, n);
+    gl.drawArrays(gl.TRIANGLE_FAN, 0, n);
 }
 
 function initVertexBuffers(gl) {
@@ -53,7 +53,7 @@ function initVertexBuffers(gl) {
     var each = 2;
     
     var vertices = new Float32Array([
-        0, 0.5, -0.5, -0.5, 0.5, -0.5
+        0, 0.5, -0.5, -0.5, 0.5, -0.5,0,-1
     ]);
     var n = vertices.length / each;
 
