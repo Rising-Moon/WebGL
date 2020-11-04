@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b8c604c0-d2f2-411c-8d8b-78fe1e367d09" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.WebGL.dir/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WebGL.dir/.idea/indexLayout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/webgl-utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/webgl-utils.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/DrawRectangle/DrawingRectangle.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/DrawRectangle/DrawingRectangle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/HelloCanvas/HelloCanvas.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/HelloCanvas/HelloCanvas.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/HelloPoint1/HelloPoint1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/HelloPoint1/HelloPoint1.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/HelloPoint2/HelloPoint2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/HelloPoint2/HelloPoint2.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/HelloTriangle/HelloTriangle.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/HelloTriangle/HelloTriangle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/MultiPoints/MultiPoints.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/MultiPoints/MultiPoints.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/TranslatedTriangle/TranslatedTriangle.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/TranslatedTriangle/TranslatedTriangle.js" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="ProjectId" id="1jmgpNLCegUmVinhsXIe8cyEXn7" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Lecture2/ClickPoint" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\MyProject\WebGL\Lecture2\ClickPoint" />
+      <recent name="F:\MyProject\WebGL\Lecture2\HelloPoint2" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JavaScript Debug.ClickPoint.html">
+    <configuration name="ClickPoint.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/WebGL/Lecture2/ClickPoint/ClickPoint.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="HelloPoint2_2.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/WebGL/Lecture2/HelloPoint2Clone/HelloPoint2_2.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="HelloPoint2.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/WebGL/Lecture2/HelloPoint2/HelloPoint2.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="HelloPoint.html (1)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/WebGL/Lecture2/HelloPoint/HelloPoint.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="HelloPoint.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/WebGL/Lecture1/HelloPoint/HelloPoint.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.ClickPoint.html" />
+        <item itemvalue="JavaScript Debug.HelloPoint2_2.html" />
+        <item itemvalue="JavaScript Debug.HelloPoint2.html" />
+        <item itemvalue="JavaScript Debug.HelloPoint.html (1)" />
+        <item itemvalue="JavaScript Debug.HelloPoint.html" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b8c604c0-d2f2-411c-8d8b-78fe1e367d09" name="Default Changelist" comment="" />
+      <created>1604414866411</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1604414866411</updated>
+      <workItem from="1604414869813" duration="150000" />
+      <workItem from="1604415027999" duration="204000" />
+      <workItem from="1604419634397" duration="1875000" />
+      <workItem from="1604421519921" duration="1117000" />
+      <workItem from="1604495256757" duration="1038000" />
+      <workItem from="1604505237658" duration="1662000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="209" y="320" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1604421477705">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="209" y="320" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1604421477705" />
+    <state x="709" y="389" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog" timestamp="1604415018977">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="709" y="389" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1604415018977" />
+    <state x="690" y="299" key="#com.intellij.ide.scriptingContext.ui.PerFileMappingsDialogWrapper" timestamp="1604415107587">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="690" y="299" key="#com.intellij.ide.scriptingContext.ui.PerFileMappingsDialogWrapper/0.0.1920.1040@0.0.1920.1040" timestamp="1604415107587" />
+    <state x="735" y="261" key="FileChooserDialogImpl" timestamp="1604415015342">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="735" y="261" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1604415015342" />
+    <state width="936" height="345" key="GridCell.Tab.0.bottom" timestamp="1604506879259">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="936" height="345" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1604506879259" />
+    <state width="936" height="345" key="GridCell.Tab.0.center" timestamp="1604506879259">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="936" height="345" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1604506879259" />
+    <state width="936" height="345" key="GridCell.Tab.0.left" timestamp="1604506879259">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="936" height="345" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1604506879259" />
+    <state width="936" height="345" key="GridCell.Tab.0.right" timestamp="1604506879259">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="936" height="345" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1604506879259" />
+    <state width="936" height="345" key="GridCell.Tab.1.bottom" timestamp="1604506879108">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="936" height="345" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1604506879108" />
+    <state width="936" height="345" key="GridCell.Tab.1.center" timestamp="1604506879108">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="936" height="345" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1604506879108" />
+    <state width="936" height="345" key="GridCell.Tab.1.left" timestamp="1604506879108">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="936" height="345" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1604506879108" />
+    <state width="936" height="345" key="GridCell.Tab.1.right" timestamp="1604506879108">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="936" height="345" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1604506879108" />
+    <state width="936" height="345" key="GridCell.Tab.2.bottom" timestamp="1604506879109">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="936" height="345" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1604506879109" />
+    <state width="936" height="345" key="GridCell.Tab.2.center" timestamp="1604506879109">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="936" height="345" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1604506879109" />
+    <state width="936" height="345" key="GridCell.Tab.2.left" timestamp="1604506879109">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="936" height="345" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1604506879109" />
+    <state width="936" height="345" key="GridCell.Tab.2.right" timestamp="1604506879109">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="936" height="345" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1604506879109" />
+    <state width="936" height="345" key="GridCell.Tab.3.bottom" timestamp="1604506879109">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="936" height="345" key="GridCell.Tab.3.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1604506879109" />
+    <state width="936" height="345" key="GridCell.Tab.3.center" timestamp="1604506879109">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="936" height="345" key="GridCell.Tab.3.center/0.0.1920.1040@0.0.1920.1040" timestamp="1604506879109" />
+    <state width="936" height="345" key="GridCell.Tab.3.left" timestamp="1604506879109">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="936" height="345" key="GridCell.Tab.3.left/0.0.1920.1040@0.0.1920.1040" timestamp="1604506879109" />
+    <state width="936" height="345" key="GridCell.Tab.3.right" timestamp="1604506879109">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="936" height="345" key="GridCell.Tab.3.right/0.0.1920.1040@0.0.1920.1040" timestamp="1604506879109" />
+    <state x="461" y="164" key="SettingsEditor" timestamp="1604505724882">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="461" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1604505724882" />
+  </component>
+</project>
