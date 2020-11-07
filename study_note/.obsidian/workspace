@@ -1,0 +1,104 @@
+{
+  "main": {
+    "id": "992882846a25b7e3",
+    "type": "split",
+    "children": [
+      {
+        "id": "6925874b230eb2e7",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "着色器.md",
+            "mode": "source"
+          }
+        },
+        "group": "110f393f651111b8"
+      },
+      {
+        "id": "2e25e67a9d154d5c",
+        "type": "leaf",
+        "active": true,
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "着色器.md",
+            "mode": "preview"
+          }
+        },
+        "group": "110f393f651111b8"
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "490691df2d858629",
+    "type": "split",
+    "children": [
+      {
+        "id": "3e542217b8480fd7",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "3036837445ffc6c5",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "d21e65437872a294",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": ""
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 229,
+    "collapsed": true
+  },
+  "right": {
+    "id": "02e0f3ce9ca5275e",
+    "type": "split",
+    "children": [
+      {
+        "id": "45f440f7882220be",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "edca420073319408",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "着色器.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "lastOpenFiles": [
+    "着色器.md",
+    "WebGL机制.md",
+    "目录.md",
+    "常用代码归纳.md",
+    "Untitled.md",
+    "WebGL要点.md",
+    "此书自定义接口.md",
+    "WegGL使用大致流程.md",
+    "WebGL接口.md",
+    "WebGL使用大致流程.md"
+  ]
+}

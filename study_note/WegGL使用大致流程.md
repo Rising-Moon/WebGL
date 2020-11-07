@@ -1,4 +1,4 @@
-﻿## html文件
+## html文件
 1. 在body中定义canvas
 ```
 <!-- 创建一个canvas -->
