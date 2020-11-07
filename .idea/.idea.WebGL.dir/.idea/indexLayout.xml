@@ -3,6 +3,8 @@
   <component name="ContentModelUserStore">
     <attachedFolders />
     <explicitIncludes />
-    <explicitExcludes />
+    <explicitExcludes>
+      <Path>examples</Path>
+    </explicitExcludes>
   </component>
 </project>
