@@ -4,29 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "6925874b230eb2e7",
-        "type": "leaf",
-        "state": {
-          "type": "markdown",
-          "state": {
-            "file": "着色器.md",
-            "mode": "source"
-          }
-        },
-        "group": "110f393f651111b8"
-      },
-      {
-        "id": "2e25e67a9d154d5c",
+        "id": "0b290f115acb709e",
         "type": "leaf",
         "active": true,
         "state": {
           "type": "markdown",
           "state": {
-            "file": "着色器.md",
+            "file": "WebGL机制.md",
             "mode": "preview"
           }
-        },
-        "group": "110f393f651111b8"
+        }
       }
     ],
     "direction": "vertical"
@@ -53,7 +40,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": ""
+                "query": "绑定缓冲区"
               }
             }
           }
@@ -61,8 +48,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 229,
-    "collapsed": true
+    "width": 229
   },
   "right": {
     "id": "02e0f3ce9ca5275e",
@@ -78,7 +64,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "着色器.md"
+                "file": "WebGL机制.md"
               }
             }
           }
@@ -90,15 +76,15 @@
     "collapsed": true
   },
   "lastOpenFiles": [
-    "着色器.md",
     "WebGL机制.md",
+    "基础标准.md",
+    "着色器.md",
     "目录.md",
     "常用代码归纳.md",
     "Untitled.md",
     "WebGL要点.md",
     "此书自定义接口.md",
     "WegGL使用大致流程.md",
-    "WebGL接口.md",
-    "WebGL使用大致流程.md"
+    "WebGL接口.md"
   ]
 }
