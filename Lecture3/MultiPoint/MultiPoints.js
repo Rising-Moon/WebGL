@@ -42,7 +42,7 @@ function begin() {
     }
 
     //设置canvas背景色
-    gl.clearColor(0.0, 0.0, 0.0, 1.0);
+    gl.clearColor(241/255, 130/255, 141/255, 1.0);
     //清空canvas
     gl.clear(gl.COLOR_BUFFER_BIT);
     //绘制一个点
@@ -80,7 +80,7 @@ function initVertexBuffer(gl) {
     var u_FragColor = gl.getUniformLocation(gl.program, "u_FragColor");
 
     //将缓冲区对象分配给a_Position变量
-    gl.uniform4f(u_FragColor, 1.0, 0.0, 0.0, 1.0);
+    gl.uniform4f(u_FragColor, 0.8,0.3,0.1, 1.0);
     //赋值顶点位置
     gl.vertexAttribPointer(a_Position, perCount, gl.FLOAT, false, 0, 0);
 
