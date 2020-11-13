@@ -17,18 +17,7 @@ void main() {
 	0.0, 0.0, 1.0, 0.0,
 	-0.5, 0.3, 0.0, 1.0);
 
-	mat4 trans3 = mat4(
-	0.5, 0.0, 0.0, 0.0,
-	0.0, 0.5, 0.0, 0.0,
-	0.0, 0.0, 0.5, 0.0,
-	0.0, 0.0, 0.0, 1.0);
-
-	mat2 trans4 = mat2(
-	cos(radian), sin(radian),
-	-sin(radian), cos(radian));
-
 	//	newPos.x = a_Position.x * cos(radian) - a_Position.y * sin(radian);
 	//	newPos.y = a_Position.x * sin(radian) + a_Position.y * cos(radian);
-	gl_Position.xy = trans4 * a_Position.xy;
-	gl_Position.zw = vec2(1.0, 1.0);//设置坐标
+	gl_Position = trans * a_Position;
 }

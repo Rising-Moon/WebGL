@@ -87,7 +87,7 @@ function initVertexBuffer(gl) {
     //获取旋转角度变量
     var u_Euler = gl.getUniformLocation(gl.program, 'u_Euler');
     //设置旋转角度
-    gl.uniform1f(u_Euler, 60);
+    gl.uniform1f(u_Euler, 0);
 
     //获取顶点位置变量
     var a_Position = gl.getAttribLocation(gl.program, 'a_Position');

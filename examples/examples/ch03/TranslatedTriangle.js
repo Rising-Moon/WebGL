@@ -1,4 +1,4 @@
-// RotatedTriangle.js (c) 2012 matsuda
+// RotateTriangle_Matrix4.js (c) 2012 matsuda
 // Vertex shader program
 var VSHADER_SOURCE =
   'attribute vec4 a_Position;\n' +
