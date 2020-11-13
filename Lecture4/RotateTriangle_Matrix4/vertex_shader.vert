@@ -1,6 +1,9 @@
 attribute vec4 a_Position;
 uniform vec4 u_Translation;
 uniform float u_Euler;
+uniform mat4 u_RotateMatrix;
+uniform mat4 u_testMatrix;
+uniform mat4 u_testMatrixInverse;
 
 void main() {
 	//	vec4 newPos = a_Position;
@@ -17,7 +20,5 @@ void main() {
 	0.0, 0.0, 1.0, 0.0,
 	-0.5, 0.3, 0.0, 1.0);
 
-	//	newPos.x = a_Position.x * cos(radian) - a_Position.y * sin(radian);
-	//	newPos.y = a_Position.x * sin(radian) + a_Position.y * cos(radian);
-	gl_Position = trans * a_Position;
+	gl_Position = u_testMatrixInverse * u_RotateMatrix * u_testMatrix * a_Position;
 }

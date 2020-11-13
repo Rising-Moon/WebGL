@@ -1,6 +1,9 @@
 var VSHADER_SOURCE = null;
 
 var FSHADER_SOURCE = null;
+var angle = 0;
+var g_last = Date.now();
+var deltaTime = 0.0;
 
 function main() {
     //加载顶点着色器
@@ -35,18 +38,33 @@ function begin() {
         return;
     }
 
+    //设置canvas背景色
+    gl.clearColor(0.0, 0.0, 0.0, 1.0);
+
+    draw(gl);
+}
+
+/**
+ * 绘制
+ * @param gl
+ */
+function draw(gl) {
+    var now = Date.now();
+    deltaTime = now - g_last;
+    g_last = now;
     var n = initVertexBuffer(gl);
     if (n === -1) {
         console.log("初始化顶点buffer失败");
         return;
     }
-
-    //设置canvas背景色
-    gl.clearColor(241 / 255, 130 / 255, 141 / 255, 1.0);
     //清空canvas
     gl.clear(gl.COLOR_BUFFER_BIT);
     //绘制一个点
     gl.drawArrays(gl.TRIANGLE_STRIP, 0, n);
+    //定时刷新
+    requestAnimationFrame(function () {
+        draw(gl);
+    });
 }
 
 /**
@@ -56,9 +74,15 @@ function begin() {
  */
 function initVertexBuffer(gl) {
     //顶点位置
-    var vertices = new Float32Array([0.0, 0.0, 0.5, 0.0, 0.0, 0.5]);
+    var vertices = new Float32Array([
+        0.0, 0.0, 0.0,
+        0.0, 0.5, 0.0,
+        0.5, 0.0, 0.0,
+        0.5, 0.5, 0.0,
+        0.5, 0.0, 0.5,
+        0.5, 0.5, 0.5]);
     //数组内几个数字代表一个点
-    var perCount = 2;
+    var perCount = 3;
     //点的数量
     var n = vertices.length / perCount;
 
@@ -82,7 +106,7 @@ function initVertexBuffer(gl) {
     //获取片元颜色变量
     var u_FragColor = gl.getUniformLocation(gl.program, "u_FragColor");
     //赋值片元颜色
-    gl.uniform4f(u_FragColor, 0.8, 0.3, 0.1, 1.0);
+    gl.uniform4f(u_FragColor, 0.3, 0.3, 0.3, 1.0);
 
     //获取旋转角度变量
     var u_Euler = gl.getUniformLocation(gl.program, 'u_Euler');
@@ -94,10 +118,42 @@ function initVertexBuffer(gl) {
     //将缓冲区对象分配给a_Position变量
     gl.vertexAttribPointer(a_Position, perCount, gl.FLOAT, false, 0, 0);
 
+    //设置变换矩阵
+    var matrix = new Matrix4();
+    matrix.rotate(angle, 1, 1, 1);
+    angle += 90 * deltaTime / 1000;
+    setUniformMatrix(gl, 'u_RotateMatrix', matrix);
+
+    //设置变基矩阵
+    var testMatrix = new Matrix4();
+    testMatrix.elements = new Float32Array([
+        0, 1, 0, 0,
+        -1, 0, 0, 0,
+        0, 0, 1, 0,
+        0, 0, 0, 1
+    ])
+    setUniformMatrix(gl, "u_testMatrix", testMatrix);
+
+    //设置逆变基矩阵
+    var testInvertMatrix = new Matrix4(testMatrix);
+    testInvertMatrix = testInvertMatrix.invert();
+    setUniformMatrix(gl, "u_testMatrixInverse", testInvertMatrix);
+
     //连接a_Position变量与分配给它的缓冲区对象
     gl.enableVertexAttribArray(a_Position);
 
     return n;
+}
+
+/**
+ * 为gl设置matrix
+ * @param gl
+ * @param name
+ * @param matrix
+ */
+function setUniformMatrix(gl, name, matrix) {
+    var target = gl.getUniformLocation(gl.program, name);
+    gl.uniformMatrix4fv(target, false, matrix.elements);
 }
 
 /**
