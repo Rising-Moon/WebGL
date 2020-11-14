@@ -1,4 +1,4 @@
-// MultiAttributeColor.js (c) 2012 matsuda
+// TexturedQuad.js (c) 2012 matsuda
 // Vertex shader program
 var VSHADER_SOURCE =
   // x' = x cosβ - y sinβ
