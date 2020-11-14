@@ -10,7 +10,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "此书自定义接口.md",
+            "file": "OpenGL ES着色器语言之内建函数.md",
             "mode": "source"
           }
         },
@@ -22,7 +22,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "此书自定义接口.md",
+            "file": "OpenGL ES着色器语言之内建函数.md",
             "mode": "preview"
           }
         },
@@ -61,8 +61,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 229,
-    "collapsed": true
+    "width": 229
   },
   "right": {
     "id": "02e0f3ce9ca5275e",
@@ -78,7 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "此书自定义接口.md"
+                "file": "OpenGL ES着色器语言之内建函数.md"
               }
             }
           }
@@ -90,15 +89,15 @@
     "collapsed": true
   },
   "lastOpenFiles": [
+    "OpenGL ES着色器语言之内建函数.md",
+    "着色器.md",
+    "Untitled.md",
     "此书自定义接口.md",
+    "基础标准.md",
+    "WebGL接口.md",
     "数学知识.md",
     "目录.md",
-    "Untitled.md",
     "WegGL使用大致流程.md",
-    "基础标准.md",
-    "常见接口.md",
-    "WebGL笔记概述.md",
-    "常用代码归纳.md",
-    "WebGL机制.md"
+    "常见接口.md"
   ]
 }

@@ -1,6 +1,6 @@
 var VSHADER_SOURCE = null;
-
 var FSHADER_SOURCE = null;
+
 var angle = 0;
 var g_last = Date.now();
 var deltaTime = 0.0;
@@ -74,20 +74,19 @@ function draw(gl) {
  */
 function initVertexBuffer(gl) {
     //顶点位置
-    var vertices = new Float32Array([
-        0.0, 0.0, 0.0,
-        0.0, 0.5, 0.0,
-        0.5, 0.0, 0.0,
-        0.5, 0.5, 0.0,
-        0.5, 0.0, 0.5,
-        0.5, 0.5, 0.5]);
-    //数组内几个数字代表一个点
-    var perCount = 3;
-    //点的数量
-    var n = vertices.length / perCount;
+    var vertexInfo = new Float32Array([
+        0.0, 0.0, 0.0, 10.0,
+        0.0, 0.5, 0.0, 15.0,
+        0.5, 0.0, 0.0, 20.0,
+        0.5, 0.5, 0.0, 25.0,
+        0.5, 0.0, 0.5, 30.0,
+        0.5, 0.5, 0.5, 35.0]);
 
-    //顶点尺寸
-    var sizes = new Float32Array([10.0, 20.0, 30.0, 40.0, 50.0, 60.0]);
+    //数组内几个数字代表一个点
+    var perCount = 4;
+    //点的数量
+    var n = vertexInfo.length / perCount;
+
 
     //创建缓冲区对象
     var vertexBuffer = gl.createBuffer();
@@ -96,28 +95,25 @@ function initVertexBuffer(gl) {
         return -1;
     }
 
-    //创建缓冲区对象
-    var sizeBuffer = gl.createBuffer();
-    if (!sizeBuffer) {
-        console.log("创建缓冲区buffer失败");
-        return -1;
-    }
-
     //将缓冲区对象绑定到目标并写入数据
     gl.bindBuffer(gl.ARRAY_BUFFER, vertexBuffer);
-    gl.bufferData(gl.ARRAY_BUFFER, vertices, gl.STATIC_DRAW);
+    gl.bufferData(gl.ARRAY_BUFFER, vertexInfo, gl.STATIC_DRAW);
+
+    //数组中每个元素的大小
+    var FSIZE = vertexInfo.BYTES_PER_ELEMENT;
+
     //获取顶点位置变量
     var a_Position = gl.getAttribLocation(gl.program, 'a_Position');
     //将缓冲区对象分配给a_Position变量
-    gl.vertexAttribPointer(a_Position, perCount, gl.FLOAT, false, 0, 0);
+    gl.vertexAttribPointer(a_Position, perCount - 1, gl.FLOAT, false, FSIZE * 4, 0);
     //连接a_Position变量与分配给它的缓冲区对象
     gl.enableVertexAttribArray(a_Position);
 
-
-    gl.bindBuffer(gl.ARRAY_BUFFER, sizeBuffer);
-    gl.bufferData(gl.ARRAY_BUFFER, sizes, gl.STATIC_DRAW);
+    //获取顶点大小变量
     var a_PointSize = gl.getAttribLocation(gl.program, 'a_PointSize');
-    gl.vertexAttribPointer(a_PointSize, 1, gl.FLOAT, false, 0, 0);
+    //将缓冲区对象分配给a_Position变量
+    gl.vertexAttribPointer(a_PointSize, 1, gl.FLOAT, false, FSIZE * 4, FSIZE * 3);
+    //连接a_Position变量与分配给它的缓冲区对象
     gl.enableVertexAttribArray(a_PointSize);
 
     //设置变换矩阵
