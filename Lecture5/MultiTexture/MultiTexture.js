@@ -1,6 +1,7 @@
 var VSHADER_SOURCE = null;
 var FSHADER_SOURCE = null;
-var image = null;
+var image0 = null;
+var image1 = null;
 
 var angle = 0;
 var g_last = Date.now();
@@ -10,7 +11,7 @@ function main() {
     //加载顶点着色器
     loadFile("vertex_shader.vert", function (text) {
         VSHADER_SOURCE = text;
-        if (checkShaderInit()) {
+        if (checkAllInit()) {
             tryBegin();
         }
     });
@@ -18,20 +19,30 @@ function main() {
     //加载片元着色器
     loadFile("fragment_shader.frag", function (text) {
         FSHADER_SOURCE = text;
-        if (checkShaderInit()) {
+        if (checkAllInit()) {
             tryBegin();
         }
     });
 
     //加载图片
-    var img = new Image();
-    img.onload = function () {
-        image = img;
-        if (checkShaderInit()) {
+    var img0 = new Image();
+    img0.onload = function () {
+        image0 = img0;
+        if (checkAllInit()) {
             tryBegin();
         }
     };
-    img.src = "img.png";
+    img0.src = "img.png";
+
+    var img1 = new Image();
+    img1.onload = function () {
+        image1 = img1;
+        if (checkAllInit()) {
+            tryBegin();
+        }
+    }
+    img1.src = "circle.gif";
+
 
 }
 
@@ -91,12 +102,12 @@ function initVertexBuffer(gl) {
         0.0, 0.5, 0.0, 0.0, 1.0,
         0.5, 0.0, 0.0, 1.0, 0.0,
         0.5, 0.5, 0.0, 1.0, 1.0,
-        0.5, 0.0, 0.5, 0.0, 0.0,
-        0.5, 0.5, 0.5, 0.0, 1.0,
-        /*0.0, 0.0, 0.5, 1.0, 0.0,
-        0.0, 0.5, 0.5, 1.0, 1.0,
-        0.0, 0.0, 0.0, 0.0, 0.0,
-        0.0, 0.5, 0.0, 0.0, 1.0,*/]);
+        /*    0.5, 0.0, 0.5, 0.0, 0.0,
+            0.5, 0.5, 0.5, 0.0, 1.0,
+            0.0, 0.0, 0.5, 1.0, 0.0,
+            0.0, 0.5, 0.5, 1.0, 1.0,
+            0.0, 0.0, 0.0, 0.0, 0.0,
+            0.0, 0.5, 0.0, 0.0, 1.0,*/]);
 
     //数组内几个数字代表一个点
     var perCount = 5;
@@ -132,7 +143,8 @@ function initVertexBuffer(gl) {
     gl.enableVertexAttribArray(a_TexCoord);
 
     //设置图片
-    setTexture(gl);
+    setTexture(gl, 0);
+    setTexture(gl, 1);
 
     //设置变换动画
     var matrix = new Matrix4();
@@ -144,24 +156,29 @@ function initVertexBuffer(gl) {
     return n;
 }
 
-function setTexture(gl) {
+function setTexture(gl, texUnit) {
     //创建纹理对象
     var texture = gl.createTexture();
     //获取u_Sampler存储位置
-    var u_Sampler = gl.getUniformLocation(gl.program, 'u_Sampler');
+    var u_Sampler = gl.getUniformLocation(gl.program, 'u_Sampler' + texUnit);
     //对图像纹理进行y轴翻转
     gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL, 1);
     //开启0号纹理单元
-    gl.activeTexture(gl.TEXTURE0);
+    if (texUnit === 0)
+        gl.activeTexture(gl.TEXTURE0);
+    else
+        gl.activeTexture(gl.TEXTURE1);
     //向target绑定纹理对象
     gl.bindTexture(gl.TEXTURE_2D, texture);
     //配置纹理参数
     gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
     //配置纹理图像
-    gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGB, gl.RGB, gl.UNSIGNED_BYTE, image);
+    if (texUnit === 0)
+        gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGB, gl.RGB, gl.UNSIGNED_BYTE, image0);
+    else
+        gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGB, gl.RGB, gl.UNSIGNED_BYTE, image1);
     //将0号纹理传递给着色器
-    gl.uniform1i(u_Sampler, 0);
-
+    gl.uniform1i(u_Sampler, texUnit);
 }
 
 /**
@@ -196,6 +213,10 @@ function loadFile(filePath, callBack) {
  * 判断shader是否初始化完成
  * @returns {boolean}
  */
-function checkShaderInit() {
-    return VSHADER_SOURCE != null && FSHADER_SOURCE != null && image != null;
+function checkAllInit() {
+    var result = VSHADER_SOURCE != null;
+    result &&= FSHADER_SOURCE != null;
+    result &&= image0 != null;
+    result &&= image1 != null;
+    return result;
 }

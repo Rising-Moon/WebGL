@@ -1,4 +1,4 @@
-// TexturedQuad.js (c) 2012 matsuda and kanda
+// MultiTexture.js (c) 2012 matsuda and kanda
 // Vertex shader program
 var VSHADER_SOURCE =
   'attribute vec4 a_Position;\n' +
