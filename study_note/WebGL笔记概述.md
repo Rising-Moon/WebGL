@@ -1,4 +1,4 @@
-﻿## 前言
+## 前言
 - 本人是一名Unity前端工程师，已经学习了一些shader方面和渲染管线方面的知识，现在准备补习OpenGL
 部分知识。本篇学习WebGL的笔记是为了快速熟悉openGL，选择WebGL是因为WebGL是由OpenGL ES2.0
 派生而来，二者十分相似。
