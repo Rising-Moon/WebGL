@@ -3,15 +3,19 @@ var FSHADER_SOURCE = null;
 var PIXEL_SHADER = null;
 
 //当前时间(ms)
-var g_time = Date.now();
+var g_startTime = 0;
+var g_time = 0;
 //每帧间隔(ms)
 var g_deltaTime = 0.0;
 //帧
 var g_frame = 0;
 
-//鼠标是否按下
+//鼠标坐标
+var g_mouseDown = false;
 var g_mouseX = 0.0;
 var g_mouseY = 0.0;
+var g_clickX = 0.0;
+var g_clickY = 0.0;
 
 function main() {
     //加载顶点着色器
@@ -37,15 +41,6 @@ function main() {
             begin();
         }
     });
-
-    //鼠标按下状态
-    document.onmousedown = function (ev) {
-        var x = ev.clientX; //鼠标点击处的x坐标
-        var y = ev.clientY; //鼠标点击处的y坐标
-        var rect = ev.target.getBoundingClientRect();
-        g_mouseX = ((x - rect.left) - canvas.height / 2) / (canvas.height / 2);
-        g_mouseY = (canvas.width / 2 - (y - rect.top)) / (canvas.width / 2);
-    }
 }
 
 /**
@@ -60,9 +55,37 @@ function checkShaderInit() {
  * 开始绘制
  */
 function begin() {
+    //记录开始时间
+    g_startTime = Date.now()/1000.0;
+
     //获取canvas
     var canvas = document.getElementById('webgl');
     var gl = getWebGLContext(canvas, true);
+
+    //鼠标按下状态
+    document.onmousedown = function (ev) {
+        g_mouseDown = true;
+    }
+    document.onmouseup = function (ev){
+        g_mouseDown = false;
+    }
+    document.onmousemove = function (ev){
+        if(!g_mouseDown)
+            return;
+        var x = ev.clientX; //鼠标点击处的x坐标
+        var y = ev.clientY; //鼠标点击处的y坐标
+        var rect = ev.target.getBoundingClientRect();
+        g_mouseX = x - rect.left;
+        g_mouseY = canvas.height - y + rect.top;
+    }
+
+    document.onclick = function (ev){
+        var x = ev.clientX; //鼠标点击处的x坐标
+        var y = ev.clientY; //鼠标点击处的y坐标
+        var rect = ev.target.getBoundingClientRect();
+        g_clickX = x - rect.left;
+        g_clickY = canvas.height - y + rect.top;
+    }
 
     FSHADER_SOURCE = FSHADER_SOURCE.replace("/*{pixel}*/", PIXEL_SHADER);
 
@@ -74,17 +97,17 @@ function begin() {
 
     //设置canvas背景色
     gl.clearColor(1.0, 1.0, 1.0, 1.0);
-    draw(gl);
+    draw(gl,canvas);
 }
 
 /**
  * 绘制
  * @param gl
  */
-function draw(gl) {
+function draw(gl,canvas) {
     //region 计算全局数据
-    var now = Date.now();
-    g_deltaTime = now - g_time;
+    var now = Date.now()/1000.0 - g_startTime;
+    g_deltaTime = (now - g_time)/1000.0;
     g_time = now;
     //endregion
 
@@ -94,29 +117,24 @@ function draw(gl) {
         -1.0, -1.0, 0.0,
         1.0, -1.0, 0.0 // v0-v1-v2-v3 front
     ]);
-    var fragCoord = new Float32Array([    // FragCoord
-        400.0, 400.0,
-        0.0, 400.0,
-        0.0, 0.0,
-        400.0, 0.0  // v0-v1-v2-v3 front
-    ]);
     // Indices of the vertices
     var indices = new Uint8Array([
         0, 1, 2, 0, 2, 3    // front
     ]);
 
     initArrayBuffer(gl, "a_Position", vertices, 3);
-    initArrayBuffer(gl, "a_Frag", fragCoord, 2);
 
     //传入变量
     var iTime = gl.getUniformLocation(gl.program, "iTime");
     gl.uniform1f(iTime, g_time);
-
     var iTimeDelta = gl.getUniformLocation(gl.program, "iTimeDelta");
     gl.uniform1f(iTimeDelta, g_deltaTime);
-
     var iFrame = gl.getUniformLocation(gl.program, "iFrame");
     gl.uniform1i(iFrame, g_frame);
+    var iResolution = gl.getUniformLocation(gl.program,"iResolution");
+    gl.uniform2f(iResolution,canvas.width,canvas.height);
+    var iMouse = gl.getUniformLocation(gl.program,"iMouse");
+    gl.uniform4f(iMouse,g_mouseX,g_mouseY,g_clickX,g_clickY);
 
     //由索引来决定顶顶点数量
     var n = indices.length;
@@ -139,7 +157,7 @@ function draw(gl) {
     // 定时刷新
     requestAnimationFrame(function () {
         g_frame++;
-        draw(gl);
+        draw(gl,canvas);
     });
 }
 

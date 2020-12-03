@@ -1,16 +1,16 @@
-#define iResolution gl_FragCoord.xyz
 precision mediump float;
-varying vec2 v_Frag;//像素位置
 
 uniform float iTime;
 uniform float iTimeDelta;
 uniform int iFrame;
+uniform vec2 iResolution;
+uniform vec4 iMouse;
 
 /*{pixel}*/
 
 void main(){
 	vec4 fragColor;
-	mainImage(fragColor, v_Frag);
+	mainImage(fragColor, gl_FragCoord.xy);
 
 	gl_FragColor = fragColor;//设置颜色
 }
